@@ -57,6 +57,12 @@
   text-align: center;
 }
 
+.examples {
+  margin: 1rem 0;
+  line-height: 1.15;
+  font-size: 2rem;
+}
+
 .description {
   line-height: 1.5;
   font-size: 1.5rem;
