@@ -1,10 +1,50 @@
+import Link from 'next/link'
+import { StructuredText } from 'react-datocms'
+
 import { allArticles, articleBySlug } from '../../lib/datocms'
 
-function Article({ article }) {
+const renderLinkToRecord = ({ record, children }) => {
+  switch(record.__typename) {
+  case 'ItemRecord':
+    return <Link href={`/items/${record.slug}`}>{children[0]}</Link>
+  default:
+    return ''
+  }
+}
+
+const renderInlineRecord = ({ record }) => {
+  switch(record.__typename) {
+  case 'ArticleRecord':
+    return <strong>{ record.title }</strong>
+  default:
+    return ''
+  }
+}
+
+const renderBlock = ({ record }) => {
+  switch(record.__typename) {
+  case 'MyarticleblockRecord':
+    return (
+      <div>
+        <h1>{ record.articleBlockTitle }</h1>
+        <p><img src={ record.image.url } /></p>
+      </div>
+    )
+  default:
+    return ''
+  }
+}
+
+const Article = ({ article }) => {
   return (
     <>
       <h1>{ article.title }</h1>
-      <pre>{ JSON.stringify(article.body) }</pre>
+      <StructuredText
+        data={ article.body }
+        renderBlock={ renderBlock }
+        renderInlineRecord={ renderInlineRecord }
+        renderLinkToRecord={ renderLinkToRecord }
+      />
     </>
   )
 }
