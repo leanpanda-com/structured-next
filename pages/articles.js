@@ -1,18 +1,19 @@
 import Link from 'next/link'
 
 import { allArticles } from '../lib/datocms'
+import styles from '../styles/Articles.module.css'
 
 const Articles = ({ articles }) => {
   return (
-    <ul>
+    <>
       {articles.map(article => (
-        <li>
-          <Link href={`/articles/${article.slug}`}>
+        <Link href={`/articles/${article.slug}`}>
+          <div className={styles.card}>
             {article.title}
-          </Link>
-        </li>
+          </div>
+        </Link>
       ))}
-    </ul>
+    </>
   )
 }
 
