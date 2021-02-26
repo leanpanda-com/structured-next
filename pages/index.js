@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 
+import Footer from '../components/Footer'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -23,15 +24,7 @@ export default function Home() {
         </p>
       </main>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://leanpanda.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Lean Panda
-        </a>
-      </footer>
+      <Footer />
     </div>
   )
 }
