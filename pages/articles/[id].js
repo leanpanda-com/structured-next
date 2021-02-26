@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { StructuredText } from 'react-datocms'
 
 import { allArticles, articleBySlug } from '../../lib/datocms'
+import styles from '../../styles/Article.module.css'
 
 const renderLinkToRecord = ({ record, children }) => {
   switch(record.__typename) {
@@ -37,7 +38,7 @@ const renderBlock = ({ record }) => {
 
 const Article = ({ article }) => {
   return (
-    <>
+    <div className={styles.article}>
       <h1>{ article.title }</h1>
       <StructuredText
         data={ article.body }
@@ -45,7 +46,7 @@ const Article = ({ article }) => {
         renderInlineRecord={ renderInlineRecord }
         renderLinkToRecord={ renderLinkToRecord }
       />
-    </>
+    </div>
   )
 }
 
