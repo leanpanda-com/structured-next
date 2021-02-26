@@ -7,6 +7,7 @@ const Footer = () => (
       target="_blank"
       rel="noopener noreferrer"
     >
+      <img src="/logo-leanpanda-lettering-black.svg" />
       Lean Panda
     </a>
   </footer>
