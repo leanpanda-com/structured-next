@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from 'next/link'
 
 import '../styles/globals.css'
 import Footer from '../components/Footer'
@@ -11,6 +12,12 @@ const MyApp = ({ Component, pageProps }) => {
         <title>DatoCMS Structured Text</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      <Link href="/articles">
+        <h1 className={styles.title}>
+          DatoCMS Structured Text
+        </h1>
+      </Link>
 
       <Component {...pageProps} />
 
