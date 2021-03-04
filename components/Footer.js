@@ -8,7 +8,6 @@ const Footer = () => (
       rel="noopener noreferrer"
     >
       <img src="/logo-leanpanda-lettering-black.svg" />
-      Lean Panda
     </a>
   </footer>
 )
