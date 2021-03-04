@@ -7,7 +7,7 @@ import styles from '../../styles/Article.module.css'
 const renderLinkToRecord = ({ record, children }) => {
   switch(record.__typename) {
   case 'ItemRecord':
-    return <Link href={`/items/${record.slug}`}>{children[0]}</Link>
+    return <Link href={ `/items/${record.slug}` }>{ children[0] }</Link>
   default:
     return ''
   }
@@ -38,7 +38,7 @@ const renderBlock = ({ record }) => {
 
 const Article = ({ article }) => {
   return (
-    <div className={styles.article}>
+    <div className={ styles.article }>
       <h1>{ article.title }</h1>
       <StructuredText
         data={ article.body }

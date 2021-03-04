@@ -7,9 +7,12 @@ const Articles = ({ articles }) => {
   return (
     <>
       {articles.map(article => (
-        <Link key={`article-${article.id}`} href={`/articles/${article.slug}`}>
-          <div className={styles.card}>
-            {article.title}
+        <Link
+          key={ `article-${article.id}` }
+          href={ `/articles/${article.slug}` }
+        >
+          <div className={ styles.card }>
+            { article.title }
           </div>
         </Link>
       ))}

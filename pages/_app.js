@@ -7,14 +7,14 @@ import styles from '../styles/_app.module.css'
 
 const MyApp = ({ Component, pageProps }) => {
   return (
-    <div className={styles.container}>
+    <div className={ styles.container }>
       <Head>
         <title>DatoCMS Structured Text</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <Link href="/">
-        <h1 className={styles.title}>
+        <h1 className={ styles.title }>
           DatoCMS Structured Text
         </h1>
       </Link>
