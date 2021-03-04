@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { StructuredText } from 'react-datocms'
 
-import { allArticles, articleBySlug } from '../../lib/datocms'
+import { allArticles, articleBySlug } from '../../lib/api'
 import styles from '../../styles/Article.module.css'
 
 const renderLinkToRecord = ({ record, children }) => {

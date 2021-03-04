@@ -1,4 +1,4 @@
-import { allItems, itemBySlug } from '../../lib/datocms'
+import { allItems, itemBySlug } from '../../lib/api'
 
 const Item = ({ item }) => {
   return (

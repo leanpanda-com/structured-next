@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import { allArticles } from '../lib/datocms'
+import { allArticles } from '../lib/api'
 import styles from '../styles/Articles.module.css'
 
 const Articles = ({ articles }) => {
