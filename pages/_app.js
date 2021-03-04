@@ -13,7 +13,7 @@ const MyApp = ({ Component, pageProps }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Link href="/articles">
+      <Link href="/">
         <h1 className={styles.title}>
           DatoCMS Structured Text
         </h1>
